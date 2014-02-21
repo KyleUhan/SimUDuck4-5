@@ -9,14 +9,6 @@ package version5;
  *
  * @author Kyle
  */
-public interface FlyAndQuackGroup extends Duck {
-
-    public abstract void performQuack();
-
-    public abstract void performFly();
-
-    public void setFlyStrategy(FlyStrategy fb);
-
-    public void setQuackStrategy(QuackStrategy qb);
+public interface FlyAndQuackGroup extends Duck, FlyGroup, QuackGroup {
 
 }
