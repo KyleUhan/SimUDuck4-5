@@ -7,7 +7,7 @@ package version5;
 
 /**
  *
- * @author Owner
+ * @author Kyle
  */
 public interface FlyAndQuackGroup extends Duck {
 

@@ -14,12 +14,14 @@ public class MiniDuckSimulator {
             System.out.println("-------");
         }
 
+        //Dynamically changing instance variables  
         ducks[1].display();
         ducks[1].setQuackStrategy(new Quack());
         ducks[1].performQuack();
 
         System.out.println("-------");
 
+        //Example from a different group
         QuackGroup rubberduck = new RubberDuck(new Squeak());
         rubberduck.display();
         rubberduck.performQuack();
