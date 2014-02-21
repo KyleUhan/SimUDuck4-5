@@ -9,17 +9,7 @@ package version5;
  *
  */
 public interface Duck {
-
-	
 	
 	public abstract void display();
-	
-	
-//	I just removed the swim for proof of concept
-//        public void swim() {
-//		System.out.println("All ducks float, even decoys!");
-//	}
-	
-	
 	
 }

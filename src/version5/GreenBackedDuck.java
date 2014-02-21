@@ -9,14 +9,16 @@ package version5;
  *
  * @author Kyle
  */
-public class GreenBackedDuck implements FlyAndQuackGroup {
+public class GreenBackedDuck implements FlyAndQuackAndSwimGroup {
 
     private FlyStrategy flyStrategy;
     private QuackStrategy quackStrategy;
+    private SwimStrategy swimStrategy;
 
-    public GreenBackedDuck(FlyStrategy flyStrategy, QuackStrategy quackStrategy) {
+    public GreenBackedDuck(FlyStrategy flyStrategy, QuackStrategy quackStrategy, SwimStrategy swimStrategy) {
         this.flyStrategy = flyStrategy;
         this.quackStrategy = quackStrategy;
+        this.swimStrategy = swimStrategy;
     }
 
     @Override
@@ -30,6 +32,11 @@ public class GreenBackedDuck implements FlyAndQuackGroup {
     }
 
     @Override
+    public void setSwimStrategy(SwimStrategy swimStrategy) {
+        this.swimStrategy = swimStrategy;
+    }
+
+    @Override
     public void performQuack() {
         quackStrategy.quack();
     }
@@ -37,6 +44,11 @@ public class GreenBackedDuck implements FlyAndQuackGroup {
     @Override
     public void performFly() {
         flyStrategy.fly();
+    }
+
+    @Override
+    public void performSwim() {
+        swimStrategy.swim();
     }
 
     @Override
